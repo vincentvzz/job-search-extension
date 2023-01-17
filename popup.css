@@ -1,0 +1,18 @@
+body {
+    width: max-content;
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  .popup-title {
+    font-weight: 900;
+    background-color: blueviolet;
+    color: white;
+    width: 100%;
+    padding: 5px;
+  }
+
+  .popup-content {
+    font-family: monospace;
+    padding: 5px;
+  }
