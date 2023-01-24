@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
+:root {
+  --input-border: rgb(35, 80, 242);
+  --input-focus-h: 245;
+  --input-focus-s: 100%;
+  --input-focus-l: 42%;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   width: max-content;
@@ -7,26 +14,35 @@ body {
   font-size: 1rem;
 }
 
-.popup-title {
-  font-weight: 900;
-  background-color: blueviolet;
-  color: white;
-  width: 100%;
-  padding: 5px;
-}
-
-.popup-content {
-  padding: 5px;
-}
-
 #add-job {
   background-color: rgb(35, 80, 242);
   color: white;
-  text-align: center;
 }
 
 #download-btn {
   background-color: rgb(35, 187, 33);
   color: white;
-  text-align: center;
+}
+
+#company-name-input {
+  font-size: 16px;
+  border-radius: 3px;
+  border: 2px solid var(--input-border);
+  padding: 5px;
+  margin: 5px;
+}
+
+.popup-container {
+  margin: 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  margin: 5px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
 }
