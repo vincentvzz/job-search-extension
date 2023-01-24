@@ -15,3 +15,19 @@ document.getElementById("add-job").addEventListener("click", async () => {
     await chrome.storage.local.set({"company_list": result["company_list"]});
 })
 
+// https://www.geeksforgeeks.org/how-to-create-and-download-csv-file-in-javascript/
+document.getElementById("download-btn").addEventListener("click", async () => {
+    const result = await chrome.storage.local.get({"company_list": {}});
+    let csv_temp_data = ["Company Name,Job URL"];
+    Object.keys(result["company_list"]).forEach((curKey) => {
+        csv_temp_data.push(curKey + "," + result["company_list"][curKey]);
+    });
+    const csv_data = csv_temp_data.join("\n");
+
+    const blob = new Blob([csv_data], { type: 'text/csv' });
+    const url = window.URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.setAttribute('href', url)
+    a.setAttribute('download', 'job_list.csv');
+    a.click();
+})

@@ -24,3 +24,9 @@ body {
   color: white;
   text-align: center;
 }
+
+#download-btn {
+  background-color: rgb(35, 187, 33);
+  color: white;
+  text-align: center;
+}
