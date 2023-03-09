@@ -10,6 +10,24 @@
         "tabs",
         "storage"
     ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "firebase-app.js",
+                "firebase-firestore.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [{
+        "matches": ["<all_urls>"],
+        "resources": [
+            "firebase-app.js",
+            "firebase-firestore.js"
+        ]
+      }],
     "content_security_policy": {
         "extension_pages": "script-src 'self' 'wasm-unsafe-eval' http://localhost:* http://127.0.0.1:*; object-src 'self'"
     }

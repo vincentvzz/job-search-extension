@@ -1,6 +1,8 @@
 // need to download firebase app and firebase firestore locally
-import { initializeApp } from "./firebase-app.js";
-import { getFirestore, collection, query, where, doc, addDoc, setDoc, getDocs, updateDoc, arrayUnion } from "./firebase-firestore.js";
+// import { initializeApp } from "./firebase-app.js";
+// import { getFirestore, collection, query, where, doc, addDoc, setDoc, getDocs, updateDoc, arrayUnion } from "./firebase-firestore.js";
+
+console.log(555);
 
 const firebaseConfig = {
     apiKey: "AIzaSyB5UX2SHZ4Mzc1XvF5UgDvTGd4WLwBOsQc",
