@@ -11,17 +11,17 @@ document.getElementById("add-job").addEventListener("click", async () => {
     let usernameInput = document.getElementById("username").value;
     let result = await chrome.storage.local.get({"company_list": {}});
     result["company_list"][current_company] = current_url;
-    company_list_arr = [];
-    for (const [key, value] of Object.entries(result["company_list"])) {
-        company_list_arr.push({
-            title: "",
-            companyName: key,
-            jdLink: value,
-            status: ""
-        });
-    }
-    localStorage.setItem("company_list", company_list_arr);
-    localStorage.setItem("username", usernameInput);
+    // company_list_arr = [];
+    // for (const [key, value] of Object.entries(result["company_list"])) {
+    //     company_list_arr.push({
+    //         title: "",
+    //         companyName: key,
+    //         jdLink: value,
+    //         status: ""
+    //     });
+    // }
+    // localStorage.setItem("company_list", company_list_arr);
+    // localStorage.setItem("username", usernameInput);
     await chrome.storage.local.set({"company_list": result["company_list"], "username": usernameInput});
 })
 
